@@ -7,20 +7,20 @@ using namespace std;
 struct Producto {
     string nombre;
     float precio;
-    char categoria; // A=Alimentos, R=Ropa, T=Tecnología
+    char categoria; // A=Alimentos, R=Ropa, T=TecnologÃ­a
 };
 
 // Vector para guardar productos
 vector<Producto> productos;
 
-// Función para pausar la pantalla
+// Funcion para pausar la pantalla
 void pausa() {
     cout << "\nPresione ENTER para continuar...";
     cin.ignore();
     cin.get();
 }
 
-// Función para agregar un producto (usa string, float, char)
+// FunciÃ³n para agregar un producto (usa string, float, char)
 void agregarProducto() {
     Producto p;
     cout << "Ingrese el nombre del producto: ";
@@ -47,7 +47,7 @@ void mostrarProductos() {
     cout << "\n--- Lista de productos ---\n";
     for (int i = 0; i < productos.size(); i++) {
         cout << i + 1 << ". " << productos[i].nombre
-             << " | Precio: ¢" << productos[i].precio
+             << " | Precio: Â¢" << productos[i].precio
              << " | Categoria: " << productos[i].categoria << endl;
     }
 }
@@ -68,10 +68,10 @@ void calcularPromedio() {
     }
 
     float promedio = suma / contador;
-    cout << "El precio promedio de los productos es: ¢" << promedio << endl;
+    cout << "El precio promedio de los productos es: Â¢" << promedio << endl;
 }
 
-// Contar productos según precio (usa if else, contador)
+// Contar productos segÃºn precio (usa if else, contador)
 void contarPorPrecio() {
     if (productos.empty()) {
         cout << "No hay productos registrados.\n";
@@ -86,11 +86,11 @@ void contarPorPrecio() {
             caros++;
     }
 
-    cout << "Productos baratos (< ¢5000): " << baratos << endl;
-    cout << "Productos caros (= ¢5000): " << caros << endl;
+    cout << "Productos baratos (< Â¢5000): " << baratos << endl;
+    cout << "Productos caros (= Â¢5000): " << caros << endl;
 }
 
-// Función principal (menú)
+// Para imprimir(menÃº)
 int main() {
     int opcion;
 
@@ -102,7 +102,7 @@ int main() {
         cout << "4. Contar productos caros/baratos\n";
         cout << "0. Salir\n";
         cout << "============================\n";
-        cout << "Elija una opción: ";
+        cout << "Elija una opciÃ³n: ";
         cin >> opcion;
 
         if (opcion == 1) agregarProducto();
@@ -110,7 +110,7 @@ int main() {
         else if (opcion == 3) calcularPromedio();
         else if (opcion == 4) contarPorPrecio();
         else if (opcion == 0) cout << "Saliendo del programa...\n";
-        else cout << "Opción inválida.\n";
+        else cout << "Opcion invalida.\n";
 
         if (opcion != 0) pausa();
     } while (opcion != 0);
