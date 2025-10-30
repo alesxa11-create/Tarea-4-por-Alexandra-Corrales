@@ -51,9 +51,9 @@ void Buscar()
     {
         if (nuevonombre == nombre[x])
         {
-            cout << "? El estudiante existe.\n";
+            cout << "El estudiante existe.\n";
             cout << "Nombre: " << nombre[x] << " | Nota: " << notas[x] << "\n";
-            return; // termina la función si lo encuentra
+            return; // termina la funciÃ³n si lo encuentra
         }
     }
 
@@ -78,22 +78,22 @@ void Actualizar()
             cout << "Ingrese la nueva nota: ";
             cin >> notas[x];
 
-            cout << "? Datos actualizados correctamente.\n";
+            cout << "Datos actualizados correctamente.\n";
             return;
         }
     }
 
 // Si no se encuentra el nombre
-    cout << "? El estudiante no se encontró. No se actualizó nada.\n";
+    cout << "El estudiante no se encontrÃ³. No se actualizÃ³ nada.\n";
 }
 
-//Menú principal
+//MenÃº principal
 void menu()
 {
     int opcion;
     do
     {
-        cout << "\n===== MENÚ PRINCIPAL =====\n";
+        cout << "\n===== MENÃš PRINCIPAL =====\n";
         cout << "1. Inicializar arreglos\n";
         cout << "2. Ingresar datos\n";
         cout << "3. Mostrar estudiantes\n";
@@ -101,7 +101,7 @@ void menu()
         cout << "5. Actualizar estudiante\n";
         cout << "0. Salir\n";
         cout << "==========================\n";
-        cout << "Seleccione una opción: ";
+        cout << "Seleccione una opciÃ³n: ";
         cin >> opcion;
 
         switch (opcion)
@@ -125,13 +125,13 @@ void menu()
             cout << "?? Saliendo del programa...\n";
             break;
         default:
-            cout << "??  Opción inválida, intente nuevamente.\n";
+            cout << "??  OpciÃ³n invÃ¡lida, intente nuevamente.\n";
         }
 
     } while (opcion != 0);
 }
 
-//Función principal
+//FunciÃ³n principal
 int main()
 {
     menu();
